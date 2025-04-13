@@ -1,0 +1,29 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # roda o deploy sempre que fizer push na main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload de arquivos
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "." # envia a raiz do projeto
+
+      - name: Publicar no GitHub Pages
+        uses: actions/deploy-pages@v2

@@ -14,7 +14,9 @@ main {
 
     .star2 {
       position: relative;
-      max-width: 20%;
+      max-width: 9%;
+      top: 35%;
+      left: 60%;
     }
 
     .star1 {

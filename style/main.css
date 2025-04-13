@@ -5,29 +5,69 @@ main {
   margin: 0 auto;
 
   div {
-    border: 1px solid green;
-
     .circle {
+      animation: circle 1s ease 50ms 1 normal forwards;
       max-width: 85%;
       position: absolute;
     }
 
     .star2 {
+      animation: star 1s ease 50ms normal forwards;
       position: relative;
-      max-width: 9%;
-      top: 35%;
-      left: 60%;
+      max-width: 10%;
+      top: 52%;
+      left: 75%;
     }
 
     .star1 {
+      animation: star 1s ease 50ms 1 normal forwards;
+      width: 20%;
       position: relative;
+      top: 20%;
+      right: 3%;
     }
 
     .pattins {
+      animation: pattins 3s ease 1ms 1 normal forwards;
       max-width: 100%;
       position: relative;
-      bottom: 18%;
-      right: 2%;
+      bottom: 10%;
     }
   }
+  span {
+    animation: swap-word 1s;
+    color: #06b6d4;
+    font-weight: 700;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pattins {
+  0% {
+    transform: translateX(700px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes star {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swap-word {
+  
 }

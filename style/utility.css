@@ -26,6 +26,6 @@
   box-shadow: 0px 20px 30px -13px rgba(0, 0, 0, 0.61);
 }
 
-.pd {
-  padding: 12px 24px 12px 24px;
+.padding-container {
+  padding: 12px 12px 12px 12px;
 }

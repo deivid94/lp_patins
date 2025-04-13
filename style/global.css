@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: var(#fafafa);
+  --text: var(#000000);
+  --highlights: var(#000000);
+
+  --sniptap-sun: var(#ffcd1e);
+  --sniptap-sky-mid: var(#06b6d4);
+  --sniptap-sky-light: var(#67e8f9);
+  --sniptap-joy-mid: var(#db2777);
+  --sniptap-joy-light: var(#f472b6);
+
+  --font-xs: 0.75rem; /* 12px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-base: 1rem; /* 16px */
+  --font-md: 1.125rem; /* 18px */
+  --font-lg: 1.25rem; /* 20px */
+  --font-xl: 1.5rem; /* 24px */
+  --font-2xl: 2rem; /* 32px */
+  --font-3xl: 2.5rem; /* 40px */
+  --font-4xl: 4rem; /* 48px */
+}
+
+html,
+button {
+  font: 500 1rem/ 1.5 "Monteserrat", sans-serif;
+}
+
+body {
+  border: 1px solid green;
+}
+
+h1,
+h2 {
+  font-family: "Syne", sans-serif;
+}
+
+h1 {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+}
+h2 {
+  font-size: var(--font-xl);
+  font-weight: 600;
+}
+body {
+  background-color: #fafafa;
+}
+
+p {
+  font-size: var(--font-base);
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

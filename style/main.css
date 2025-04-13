@@ -1,0 +1,31 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 90%;
+  margin: 0 auto;
+
+  div {
+    border: 1px solid green;
+
+    .circle {
+      max-width: 85%;
+      position: absolute;
+    }
+
+    .star2 {
+      position: relative;
+      max-width: 20%;
+    }
+
+    .star1 {
+      position: relative;
+    }
+
+    .pattins {
+      max-width: 100%;
+      position: relative;
+      bottom: 18%;
+      right: 2%;
+    }
+  }
+}

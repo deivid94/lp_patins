@@ -4,11 +4,21 @@ header {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  
 
   img {
     image-rendering: auto;
     object-fit: cover;
     max-width: 10%;
+    width: 1.25rem;
+    height: 1.25rem;
+    transition-duration: 750ms;
+  }
+
+  img[src*="Logo"]:hover {
+    transform: rotate(90deg);
+  }
+
+  img[src*="bag"]:hover {
+    transform: rotate(-30deg);
   }
 }

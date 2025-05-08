@@ -1,73 +1,70 @@
 main {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  div {
-    .circle {
-      animation: circle 1s ease 50ms 1 normal forwards;
-      max-width: 85%;
-      position: absolute;
-    }
+  .star2 {
+    animation: star 1s ease 50ms normal forwards;
+    position: relative;
+    max-width: 10%;
+    top: 52%;
+    left: 75%;
+  }
+  .content-photo {
+    width: 100%;
 
-    .star2 {
-      animation: star 1s ease 50ms normal forwards;
+    & figure {
       position: relative;
-      max-width: 10%;
-      top: 52%;
-      left: 75%;
+      margin-bottom: 1rem;
+      align-items: center;
+      line-height: 0;
+      overflow: hidden;
+      border-radius: 2rem;
+
+      & > img {
+        height: 19.5rem;
+        object-fit: cover;
+        width: 100%;
+        transition: scale 500ms;
+      }
+      &:hover {
+        & > img {
+          scale: 1.1;
+        }
+        figcaption {
+          transform: translateY(0px);
+        }
+      }
     }
-
-    .star1 {
-      animation: star 1s ease 50ms 1 normal forwards;
-      width: 20%;
-      position: relative;
-      top: 20%;
-      right: 3%;
-    }
-
-    .pattins {
-      animation: pattins 3s ease 1ms 1 normal forwards;
-      max-width: 100%;
-      position: relative;
-      bottom: 10%;
-    }
-  }
-  span {
-    animation: swap-word 1s;
-    color: #06b6d4;
-    font-weight: 700;
   }
 }
 
-@keyframes circle {
-  0% {
-    transform: translateX(400px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+figcaption {
+  display: flex;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.64), rgb(0 0 0 / 0));
+  transform: translateY(100%);
+  transition: transform 500ms;
+  gap: 0.5rem;
 }
 
-@keyframes pattins {
-  0% {
-    transform: translateX(700px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+& figcaption span {
+  width: 100%;
+  display: flex;
 }
-
-@keyframes star {
-  0% {
-    transform: translateX(400px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes swap-word {
-  
+& figcaption img {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
 }

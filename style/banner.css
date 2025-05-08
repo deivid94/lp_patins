@@ -1,0 +1,39 @@
+.banner {
+  width: 100%;
+  padding-block: 2.5rem;
+  overflow: hidden;
+
+  .scrolling {
+    overflow: hidden;
+    width: 100%;
+    padding-block: 1rem;
+    align-items: center;
+    background-size: 600% 100%;
+    background-image: linear-gradient(45deg, #f472b6, #67e8f9);
+    animation: moveBackgroundLinear 20s ease infinite;
+  }
+
+  .rolling {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    animation: rolling 2s linear infinite both;
+  }
+}
+
+@keyframes rolling {
+  to {
+    transform: translateX(-100px);
+  }
+}
+@keyframes moveBackgroundLinear {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
